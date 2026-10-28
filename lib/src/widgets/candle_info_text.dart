@@ -21,7 +21,7 @@ class CandleInfoText extends StatelessWidget {
   }
 
   String dateFormatter(DateTime date) {
-    return '${date.year}-${numberFormat(date.month)}-${numberFormat(date.day)} ${numberFormat(date.hour)}:${numberFormat(date.minute)}';
+    return '${numberFormat(date.day)} ${numberFormat(date.hour)}:${numberFormat(date.minute)}-${numberFormat(date.month)}-${date.year}';
   }
 
   @override
@@ -33,29 +33,29 @@ class CandleInfoText extends StatelessWidget {
         ),
         style: defaultStyle,
         children: <TextSpan>[
-          TextSpan(text: ' O:', style: TextStyle(fontSize: 9)),
+          TextSpan(text: ' O:', style: TextStyle(fontSize: 12)),
           TextSpan(
             text: HelperFunctions.priceToString(candle.open),
             style: TextStyle(
-                color: candle.isBull ? bullColor : bearColor, fontSize: 9),
+                color: candle.isBull ? bullColor : bearColor, fontSize: 12),
           ),
-          TextSpan(text: ' H:'),
+          TextSpan(text: ' H:', style: TextStyle(fontSize: 12)),
           TextSpan(
             text: HelperFunctions.priceToString(candle.high),
             style: TextStyle(
-                color: candle.isBull ? bullColor : bearColor, fontSize: 9),
+                color: candle.isBull ? bullColor : bearColor, fontSize: 12),
           ),
-          TextSpan(text: ' L:', style: TextStyle(fontSize: 9)),
+          TextSpan(text: ' L:', style: TextStyle(fontSize: 12)),
           TextSpan(
             text: HelperFunctions.priceToString(candle.low),
             style: TextStyle(
-                color: candle.isBull ? bullColor : bearColor, fontSize: 9),
+                color: candle.isBull ? bullColor : bearColor, fontSize: 12),
           ),
-          TextSpan(text: ' C:', style: TextStyle(fontSize: 9)),
+          TextSpan(text: ' C:', style: TextStyle(fontSize: 12)),
           TextSpan(
             text: HelperFunctions.priceToString(candle.close),
             style: TextStyle(
-                color: candle.isBull ? bullColor : bearColor, fontSize: 9),
+                color: candle.isBull ? bullColor : bearColor, fontSize: 12),
           ),
         ],
       ),

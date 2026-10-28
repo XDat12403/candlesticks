@@ -25,7 +25,7 @@ class HoveredCandleInfoBar extends StatelessWidget {
               defaultStyle: TextStyle(
                 color: style.ohlcInfoTextColor,
                 fontSize: 12,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.bold,
               ),
             )
           : const SizedBox.shrink(),
