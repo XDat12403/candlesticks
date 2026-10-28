@@ -37,25 +37,25 @@ class CandleInfoText extends StatelessWidget {
           TextSpan(
             text: HelperFunctions.priceToString(candle.open),
             style: TextStyle(
-                color: candle.isBull ? bullColor : bearColor, fontSize: 12),
+                color: candle.isBull ? bullColor : bearColor, fontSize: 12,),
           ),
           TextSpan(text: ' H:', style: TextStyle(fontSize: 12)),
           TextSpan(
             text: HelperFunctions.priceToString(candle.high),
             style: TextStyle(
-                color: candle.isBull ? bullColor : bearColor, fontSize: 12),
+                color: candle.isBull ? bullColor : bearColor, fontSize: 12,),
           ),
           TextSpan(text: ' L:', style: TextStyle(fontSize: 12)),
           TextSpan(
             text: HelperFunctions.priceToString(candle.low),
             style: TextStyle(
-                color: candle.isBull ? bullColor : bearColor, fontSize: 12),
+                color: candle.isBull ? bullColor : bearColor, fontSize: 12,),
           ),
           TextSpan(text: ' C:', style: TextStyle(fontSize: 12)),
           TextSpan(
             text: HelperFunctions.priceToString(candle.close),
             style: TextStyle(
-                color: candle.isBull ? bullColor : bearColor, fontSize: 12),
+                color: candle.isBull ? bullColor : bearColor, fontSize: 12,),
           ),
         ],
       ),
