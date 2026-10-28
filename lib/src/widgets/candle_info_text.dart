@@ -21,7 +21,7 @@ class CandleInfoText extends StatelessWidget {
   }
 
   String dateFormatter(DateTime date) {
-    return '${numberFormat(date.day)} ${numberFormat(date.hour)}:${numberFormat(date.minute)}-${numberFormat(date.month)}-${date.year}';
+    return '${numberFormat(date.day)}-${numberFormat(date.month)}-${date.year} ${numberFormat(date.hour)}:${numberFormat(date.minute)}';
   }
 
   @override
