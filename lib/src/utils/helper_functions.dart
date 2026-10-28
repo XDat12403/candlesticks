@@ -28,26 +28,19 @@ class HelperFunctions {
   }
 
   static String priceToString(double price) {
-    final absPrice = price.abs();
-
-    if (absPrice > 100000) return price.toStringAsFixed(0);
-    if (absPrice > 10000) return price.toStringAsFixed(1);
-    if (absPrice > 1000) return price.toStringAsFixed(2);
-    if (absPrice > 100) return price.toStringAsFixed(3);
-    if (absPrice > 10) return price.toStringAsFixed(4);
-    if (absPrice > 1) return price.toStringAsFixed(5);
-
-    return price.toStringAsFixed(7);
+    return price.toStringAsFixed(2);
   }
 
   static double calculatePriceScale(double height, double high, double low) {
     int minTiles = (height / MIN_PRICETILE_HEIGHT).floor();
     minTiles = max(2, minTiles);
     double sizeRange = high - low;
+
     assert(
       sizeRange != 0,
       'highest highs and lowest lows of visible candles are equal.',
     );
+
     double minStepSize = sizeRange / minTiles;
     double base =
         pow(10, HelperFunctions.log10(minStepSize).floor()).toDouble();
