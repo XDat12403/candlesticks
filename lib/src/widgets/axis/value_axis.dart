@@ -147,9 +147,9 @@ class _PriceColumnState extends State<ValueAxis> {
                                             maxLines: 1,
                                             softWrap: false,
                                             style: TextStyle(
-                                              color: style.axisTextColor,
-                                              fontSize: 11,
-                                            ),
+                                                color: style.axisTextColor,
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.bold),
                                           ),
                                         ),
                                       ),
