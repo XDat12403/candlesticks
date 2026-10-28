@@ -28,36 +28,34 @@ class CandleInfoText extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
-        text: dateFormatter(candle.date,),
+        text: dateFormatter(
+          candle.date,
+        ),
         style: defaultStyle,
         children: <TextSpan>[
-          TextSpan(text: ' O:'),
+          TextSpan(text: ' O:', style: TextStyle(fontSize: 9)),
           TextSpan(
             text: HelperFunctions.priceToString(candle.open),
             style: TextStyle(
-              color: candle.isBull ? bullColor : bearColor,
-            ),
+                color: candle.isBull ? bullColor : bearColor, fontSize: 9),
           ),
           TextSpan(text: ' H:'),
           TextSpan(
             text: HelperFunctions.priceToString(candle.high),
             style: TextStyle(
-              color: candle.isBull ? bullColor : bearColor,
-            ),
+                color: candle.isBull ? bullColor : bearColor, fontSize: 9),
           ),
-          TextSpan(text: ' L:'),
+          TextSpan(text: ' L:', style: TextStyle(fontSize: 9)),
           TextSpan(
             text: HelperFunctions.priceToString(candle.low),
             style: TextStyle(
-              color: candle.isBull ? bullColor : bearColor,
-            ),
+                color: candle.isBull ? bullColor : bearColor, fontSize: 9),
           ),
-          TextSpan(text: ' C:'),
+          TextSpan(text: ' C:', style: TextStyle(fontSize: 9)),
           TextSpan(
             text: HelperFunctions.priceToString(candle.close),
             style: TextStyle(
-              color: candle.isBull ? bullColor : bearColor,
-            ),
+                color: candle.isBull ? bullColor : bearColor, fontSize: 9),
           ),
         ],
       ),
